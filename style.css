@@ -14,6 +14,7 @@
     --text-muted: #555555;
     --shadow-color: rgba(0, 0, 0, 0.1);
     --border-color: #dddddd;
+    --heading-color: #0f2a4a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +27,7 @@
         --text-muted: #aaaaaa;
         --shadow-color: rgba(0, 0, 0, 0.3);
         --border-color: #444444;
+        --heading-color: #ffffff;
     }
 }
 
@@ -63,7 +65,7 @@ h1,
 h2,
 h3 {
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--heading-color);
 }
 
 h1 {
@@ -111,7 +113,7 @@ h3 {
 
 /* Header */
 header {
-    background-color: #0f294a;
+    background-color: #132339;
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -136,6 +138,7 @@ header {
     width: auto;
     object-fit: contain;
     display: block;
+    filter: brightness(1.2);
 }
 
 .footer-logo-img {
@@ -358,8 +361,17 @@ section {
     margin-bottom: 0.8rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     font-weight: 500;
+    background-color: var(--bg-card);
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    transition: transform 0.2s ease;
+}
+
+.expertise-list li:hover {
+    transform: translateX(5px);
 }
 
 .expertise-list i {
@@ -416,7 +428,7 @@ section {
 
 .social-icons a {
     margin: 0 5px;
-    color: var(--primary-color);
+    color: var(--heading-color);
     font-size: 1rem;
 }
 
@@ -463,7 +475,7 @@ textarea {
 
 /* Footer */
 footer {
-    background-color: var(--primary-color);
+    background-color: #132339;
     color: var(--white);
     padding: 4rem 0 2rem;
 }
@@ -554,7 +566,7 @@ footer {
 }
 
 .partner-info h2 {
-    color: var(--primary-color);
+    color: var(--heading-color);
     margin-bottom: 0.5rem;
 }
 
@@ -576,7 +588,7 @@ footer {
 }
 
 .partner-social a {
-    color: var(--primary-color);
+    color: var(--heading-color);
     font-size: 1.5rem;
     margin-right: 1.5rem;
     transition: color 0.3s;
@@ -618,7 +630,7 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: var(--primary-color);
+        background-color: #132339;
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
