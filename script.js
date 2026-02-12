@@ -1,34 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navUl = document.querySelector('nav ul');
-    const navBtn = document.querySelector('nav .btn');
+    const nav = document.querySelector('nav');
 
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
-            const isMenuOpen = navUl.style.display === 'flex';
-            if (isMenuOpen) {
-                navUl.style.display = 'none';
-                if (navBtn) navBtn.style.display = 'none';
-            } else {
-                navUl.style.display = 'flex';
-                navUl.style.flexDirection = 'column';
-                navUl.style.position = 'absolute';
-                navUl.style.top = '100%';
-                navUl.style.left = '0';
-                navUl.style.width = '100%';
-                navUl.style.backgroundColor = 'white';
-                navUl.style.padding = '1rem';
-                navUl.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-
-                if (navBtn) {
-                    navBtn.style.display = 'inline-block';
-                    navBtn.style.marginTop = '1rem';
-                    // Append btn to navUl for mobile structure if needed, or manage visibility
-                    // For simplicity in this structure, we might need to adjust CSS or JS
-                    navUl.appendChild(navBtn);
-                }
-            }
+            nav.classList.toggle('active');
         });
     }
 
